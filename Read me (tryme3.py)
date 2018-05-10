@@ -1,0 +1,13 @@
+Using the IDLE development environment, create a Python script named tryme3.py . Write a function in this file called nine_lines that uses a function called three_lines to print nine blank lines. Now add a function named clear_screen that prints out twenty-five blank lines. The last line of your program should call the function to clear_screen .
+
+The function three_lines and new_line are defined below so that you can see a nested function call.
+
+def new_line():
+   print()
+
+def three_lines():
+   new_line()
+   new_line()
+   new_line()
+
+Submit your Python script file in the posting of your assignment. Your Python script should be either a .txt file or a .py file. You must execute your script and copy and paste the output produced into a document that you will submit along with your python script. It is very helpful if you print a placeholder between the printing of 9 lines and the printing of 25 lines. It will make your output easier to read for the assessor. A placeholder can be a comment such as “now printing 9 lines” or “now printing 25 lines”.
