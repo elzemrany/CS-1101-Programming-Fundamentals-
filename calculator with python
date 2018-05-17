@@ -1,52 +1,48 @@
-# define functions
-def add(a, b):
-   #This function adds two numbers
+###############################################################
+# This simple calculator will only accept floats as input.
+# Any non-numeric input will cause the program to fail
+################################################################
 
-   return  a + b
+def get_number(prompt):
+    while True:
+        number = float(input(prompt))
 
-def subtract(x, y):
-   #This function subtracts two numbers
+        if number != 0.0:
+            return number
+        else:
+            print("0 is not an accpetable number.")
 
-   return a - b
+def get_operator():
+    while True:
+        operator = input("Input one of the following operators: +, -, *, /: ")
 
-def multiply(a, b):
-   #This function multiplies two numbers
+        if operator == "+" or operator == "-" or operator == "*" or operator == "/":
+            return operator
+        else:
+            print(operator, "is not a valid operator.")
 
-   return a * b
+def perform_calc(op, x, y):
+    if op == '+':
+        return x + y
+    elif op == '-':
+        return x - y
+    elif op == '*':
+        return x*y
+    else:
+        return x/y
 
-def divide(a, b):
-   #This function divides two numbers
+while True:
+    print("To perform a calculation, enter 2 numbers and an operator.")
+    
+    num1 = get_number("Enter first number: ")
+    num2 = get_number("Enter second number: ")
+    op = get_operator()
+    val = perform_calc(op, num1, num2)
 
-   return a / b
+    print("RESULT:", val)
 
-# take input from the user
-print("Select operation.")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-print("4.Divide")
+    response = input("Would you like to perform another calculation? (YES/NO)")
 
-choice = input("Enter choice(1/2/3/4):")
-
-num1 = int(input("Enter first number: "))
-num2 = int(input("Enter second number: "))
-
-#check that the user has not entered the value 0
-
-if input == '0':
-	print("Error")
-
-
-if choice == '1':
-   print(num1,"+",num2,"=", add(num1,num2))
-
-elif choice == '2':
-   print(num1,"-",num2,"=", subtract(num1,num2))
-
-elif choice == '3':
-   print(num1,"*",num2,"=", multiply(num1,num2))
-
-elif choice == '4':
-   print(num1,"/",num2,"=", divide(num1,num2))
-else:
-   print("Error")
+    if response != "YES":
+        print("Ok. Goodbye.")
+        break
