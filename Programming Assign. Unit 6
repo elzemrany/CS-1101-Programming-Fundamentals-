@@ -1,0 +1,41 @@
+Create a Python program as described below and save it in a file named bool. You should use IDLE or similar environment to create your program.
+
+ 
+
+Your assignment is to first develop a conceptual model and document it using either pseudo code or a flowchart to meet the requirements of the program described as follows.
+
+ 
+
+For your assignment you must write a compare function that returns 1 if a > b , 0 if a == b , and -1 if a < b. The user must be prompted for the values of a and b. The compare function must have arguments for a and b.
+
+ 
+
+To demonstrate your compare function, you must call the compare function three times, once for each condition, from within your program and display (using print statement) the return code of the function.
+
+Of course you will make static calls to your function to meet the test requirements. Something like:
+
+ 
+
+print compare(5,2)
+
+print compare(2,5)
+
+print compare(3,3)
+
+ 
+
+Then your program will switch to user input. Something like:
+
+ 
+
+print compare(user_input_A, user_input_B)
+
+ 
+
+Use the following table of values for a and b can be used when calling to test your compare function from within your program:
+
+ 
+
+Don’t forget to use comments and make your program readable.
+
+
